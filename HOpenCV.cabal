@@ -25,7 +25,7 @@ extra-source-files: src/OpenCV/Core/HOpenCV_wrap.h
                     src/Examples/VideoFunhouse/Makefile 
                     src/Examples/VideoFunhouse/Rate.hs
                     src/Examples/VideoFunhouse/VideoFunhouse.hs
-                    src/Examples/Closing/Closing.hs
+                    src/Examples/OneOffs/*.hs
 source-repository head
   type: git
   location: git://github.com/acowley/HOpenCV.git
@@ -55,6 +55,7 @@ library
       OpenCV.ColorConversion
       OpenCV.Drawing
       OpenCV.Contours
+      OpenCV.BackgroundSubtractor
       OpenCV.Threshold
       OpenCV.ArrayOps
       OpenCV.Filtering
@@ -63,6 +64,7 @@ library
       OpenCV.Color
    c-sources:
       src/OpenCV/Core/HOpenCV_wrap.c
+      src/OpenCV/BackgroundSubtractor.cpp
       src/OpenCV/ArrayOps_hsc.c
       src/OpenCV/FloodFill_hsc.c
       src/OpenCV/Drawing_hsc.c
